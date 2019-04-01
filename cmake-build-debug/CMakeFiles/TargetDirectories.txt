@@ -1,0 +1,3 @@
+/Users/saching12/Desktop/OperatingSystemsPart1/OS-Project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/saching12/Desktop/OperatingSystemsPart1/OS-Project/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/saching12/Desktop/OperatingSystemsPart1/OS-Project/cmake-build-debug/CMakeFiles/OS-Project.dir

@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/saching12/Desktop/OperatingSystemsPart1/OS-Project/main.cpp
+iostream
+-
+stdlib.h
+-
+pthread.h
+-
+unistd.h
+-
+

@@ -12,53 +12,32 @@ using namespace std;
 int threadVar = 0;
 pthread_mutex_t mutex1;
 
-struct pid_tab
-{
-    int pid;
-    bool bitmap;
-}pidArr[4700];
+bitset<4700> pidArr;
 
 int allocate_map(void)                                  //allocates bitmap values to the data structure
 {
-    int i,j;
-    for(i = MIN_PID, j =0; i <= MAX_PID; i++, j++)
-    {
-        pidArr[j].pid = i;
-        pidArr[j].bitmap = 0;
-    }
-    
-    if(i == MAX_PID && j == 4700)
-        return 1;
-    
-    else
-        return -1;
+
+    pidArr.reset();
 }
 
 int allocate_pid(void)                                  //allocates a pid to the new process
 {
-    for(int i = MIN_PID, j =0; i <= MAX_PID; i++, j++)
+    for(int j =0; j <= MAX_PID-MIN_PID; j++)
     {
-        if(pidArr[j].bitmap == 0)
+        if(!pidArr.test(j))
         {
-            pidArr[j].pid = i;
-            pidArr[j].bitmap = 1;
-            return i;
-            break;
+            pidArr.set(j);
+            return (j+300);
+
         }
     }
-    
+
     return -1;
 }
 
 void release_pid(int pid)                               //releases pid
 {
-    for(int i = 0; i <= 4700; i++)
-    {
-        if(pidArr[i].pid == pid)
-        {
-            pidArr[i].bitmap = 0;
-        }
-    }
+    pidArr.reset(pid - MIN_PID);
 }
 
 /* below function executes such that every thread only increments the threadVar by 1. Hence the output is numbers from 1 to 100 printed corresponding to each thread's execution.
