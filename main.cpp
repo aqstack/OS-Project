@@ -86,7 +86,7 @@ int main()
 	// creating 10 threads
     pthread_t thread[10]; 
     cout<<"10 threads created successfully!" << endl;
-	cout<<"Every thread will have 'threadVar' incremented by 1 with a delay of 100ms in each execution"; << endl;
+	cout<<"Every thread will have 'threadVar' incremented by 1 with a delay of 100ms in each execution" << endl;
 	
     usleep(3000);        // delay only so that the above can be read in output screen before execution of the rest of the code
     
