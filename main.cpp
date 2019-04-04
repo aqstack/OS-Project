@@ -17,12 +17,13 @@ using namespace std;
 int threadVar = 0;
 pthread_mutex_t mutex1;
 
-bitset<4700> pidArr;
+bitset<4701> pidArr;
 
 int allocate_map(void)                                  //allocates bitmap values to the data structure
 {
 
     pidArr.reset();
+    return 1;
 }
 
 int allocate_pid(void)                                  //allocates a pid to the new process

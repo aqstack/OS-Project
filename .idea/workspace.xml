@@ -13,6 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="154f98c7-2743-454d-9522-de6832f80671" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OS-Project.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OS-Project.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/OS-Project" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OS-Project" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -28,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="93" column="1" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
+            <state relative-caret-position="375">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding>
                 <element signature="e#147#166#0" expanded="true" />
               </folding>
@@ -141,12 +143,12 @@
       <workItem from="1554345349399" duration="597000" />
       <workItem from="1554346633226" duration="402000" />
       <workItem from="1554349197964" duration="257000" />
-      <workItem from="1554357771345" duration="101000" />
+      <workItem from="1554357771345" duration="150000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2129000" />
+    <option name="totallyTimeSpent" value="2178000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -157,13 +159,13 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286517" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32772276" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.3286517" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32772276" />
       <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.28118813" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
@@ -180,8 +182,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="93" column="1" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
+        <state relative-caret-position="375">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding>
             <element signature="e#147#166#0" expanded="true" />
           </folding>
