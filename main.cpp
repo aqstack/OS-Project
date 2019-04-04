@@ -1,7 +1,16 @@
+//////////////////////////////////
+/////// OS MINI PROJECT 1 ////////
+//////////////////////////////////
+
+
+//// Author: Junlan, Sachin and Ausaf 
+
+
 #include <iostream>
 #include <stdlib.h>
 #include <pthread.h>
 #include <unistd.h>
+
 using namespace std;
 
 #define MIN_PID 300
@@ -12,13 +21,15 @@ pthread_mutex_t mutex1;
 
 bitset<4700> pidArr;
 
-int allocate_map(void)                                  //allocates bitmap values to the data structure
+// Allocates bitset values
+int assignBitset()                                 
 {
 
     pidArr.reset();
 }
 
-int allocate_pid(void)                                  //allocates a pid to the new process
+// Assign a pid to the new process
+int assignPid(void)                                  
 {
     for(int j =0; j <= MAX_PID-MIN_PID; j++)
     {
@@ -33,42 +44,51 @@ int allocate_pid(void)                                  //allocates a pid to the
     return -1;
 }
 
-void release_pid(int pid)                               //releases pid
+// Release pid of the process
+void releasePid(int pid)                          
 {
     pidArr.reset(pid - MIN_PID);
 }
 
-/* below function executes such that every thread only increments the threadVar by 1. Hence the output is numbers from 1 to 100 printed corresponding to each thread's execution.
- The thread increments the value of threadVar by 1 and exits. Then the next thread increments by 1 again and exits. Every execution consists of a lock and unlock. */
-
-void * threadCall(void* voidA)                          //function called by the created thread
+void * threadCall(void* voidA)             
 {
-    int ret = allocate_pid();       //allocates a pid
+	// assign pid
+    int ret = assignPid();
     while (threadVar < 100)
     {
-        pthread_mutex_lock(&mutex1);     //mutex lock occurs
+        // mutex locked
+		pthread_mutex_lock(&mutex1);
         if (threadVar >= 100)
         {
             pthread_mutex_unlock(&mutex1);
             break;
         }
         
-        threadVar++;                    //threadVar increments at least once
+        threadVar++;                    
         usleep(100);
         cout<<"\n "<<threadVar;
-        pthread_mutex_unlock(&mutex1);      //mutex now unlocked
+		
+		// mutex unlocked
+        pthread_mutex_unlock(&mutex1);
     }
     usleep(5);
-    release_pid(ret);           //pid released
+	
+	// release pid
+    releasePid(ret);
 }
 
+// driver
 int main()
 {
     int i =0;
-    cout << "creating threads \n";
-    pthread_t thread[100];
-    cout<<"\n 100 threads created. Every thread will print the value of variable 'threadVar' and increment it by 1 with a delay of 100ms each process execution";
-    usleep(3000);        //delay only so that the above can be read in output screen before execution of the rest of the code
+    cout << "Thread creation begins!" << endl;
+	
+	// creating 10 threads
+    pthread_t thread[10]; 
+    cout<<"10 threads created successfully!" << endl;
+	cout<<"Every thread will have 'threadVar' incremented by 1 with a delay of 100ms in each execution"; << endl;
+	
+    usleep(3000);        // delay only so that the above can be read in output screen before execution of the rest of the code
     
     for(i = 0; i < 100; i++)
     {
