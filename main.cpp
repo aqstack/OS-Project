@@ -21,8 +21,8 @@ pthread_mutex_t mutex1;
 
 bitset<4701> pidArr;
 
-// Allocates bitset values
-int assignBitset(void)
+
+int assignBitset(void)// Allocates bitset values
 {
 
     pidArr.reset();
@@ -58,8 +58,8 @@ void * threadCall(void* voidA)
     int ret = assignPid();
     while (threadVar < 100)
     {
-        // mutex locked
-		pthread_mutex_lock(&mutex1);
+        
+		pthread_mutex_lock(&mutex1);// mutex locked
         if (threadVar >= 100)
         {
             pthread_mutex_unlock(&mutex1);
@@ -70,27 +70,25 @@ void * threadCall(void* voidA)
         usleep(100);
         cout<<"\n "<<threadVar;
 		
-		// mutex unlocked
-        pthread_mutex_unlock(&mutex1);
+        pthread_mutex_unlock(&mutex1);// mutex unlocked
     }
     usleep(5);
-	
-	// release pid
-    releasePid(ret);
+
+    releasePid(ret);// release pid
 }
 
-// driver
+
 int main()
 {
-    int i =0;
+    int i = 0;
     cout << "Thread creation begins!" << endl;
 	
 	// creating 100 threads
     pthread_t thread[100];
-    cout<<"10 threads created successfully!" << endl;
+    cout<<"100 threads created successfully!" << endl;
 	cout<<"Every thread will have 'threadVar' incremented by 1 with a delay of 100ms in each execution" << endl;
 	
-    usleep(3000);        // delay only so that the above can be read in output screen before execution of the rest of the code
+    usleep(3000);       
     
     for(i = 0; i < 100; i++)
     {
