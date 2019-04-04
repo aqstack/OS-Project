@@ -19,13 +19,15 @@ using namespace std;
 int threadVar = 0;
 pthread_mutex_t mutex1;
 
-bitset<4700> pidArr;
+bitset<4701> pidArr;
 
 // Allocates bitset values
-int assignBitset()                                 
+int assignBitset(void)
 {
 
     pidArr.reset();
+    return 1;
+
 }
 
 // Assign a pid to the new process
@@ -83,8 +85,8 @@ int main()
     int i =0;
     cout << "Thread creation begins!" << endl;
 	
-	// creating 10 threads
-    pthread_t thread[10]; 
+	// creating 100 threads
+    pthread_t thread[100];
     cout<<"10 threads created successfully!" << endl;
 	cout<<"Every thread will have 'threadVar' incremented by 1 with a delay of 100ms in each execution"; << endl;
 	
