@@ -10,6 +10,8 @@
 #include <stdlib.h>
 #include <pthread.h>
 #include <unistd.h>
+#include <bitset>
+
 using namespace std;
 
 #define MIN_PID 300
